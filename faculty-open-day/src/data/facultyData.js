@@ -8,7 +8,7 @@ export const faculties = [
     degree: {
       title: 'Bachelor of Education',
       description: 'A comprehensive program designed to prepare aspiring teachers with the knowledge, skills, and practical experience needed to excel in modern educational environments.',
-      downloadUrl: '/src/assets/Education/iie-bachelor-of-education-in-intermediate-phase-teaching-full-time-factsheet-2026.pdf',
+      downloadUrl: '/emerisopenday/downloads/iie-bachelor-of-education-in-intermediate-phase-teaching-full-time-factsheet-2026.pdf',
       modules: [
         // Professional Subjects - Semester 1
         { code: 'INPCF110', name: 'Introduction to Personal Computing', credits: 5, semester: 1, nqf: 5, category: 'Professional Subjects' },
@@ -58,7 +58,7 @@ export const faculties = [
         { code: 'FAFR5112', name: 'First Additional Language Afrikaans', credits: 15, semester: 0, nqf: 5, category: 'Electives - First Additional Languages' },
       ]
     },
-    feesUrl: '/src/assets/fees.pdf'
+    feesUrl: '/emerisopenday/downloads/fees.pdf'
   },
   {
     id: 'law',
@@ -69,7 +69,7 @@ export const faculties = [
     degree: {
       title: 'Bachelor of Laws (LLB)',
       description: 'A rigorous program that provides comprehensive legal education, critical thinking skills, and practical training for aspiring legal professionals.',
-      downloadUrl: '/src/assets/Law/iie-bachelor-of-commerce-in-law-full-time-factsheet-2026-v1.pdf',
+      downloadUrl: '/emerisopenday/downloads/iie-bachelor-of-commerce-in-law-full-time-factsheet-2026-v1.pdf',
       modules: [
         // Semester 1
         { code: 'BMNG5121', name: 'Business Management 1A', credits: 15, semester: 1, nqf: 5 },
@@ -86,7 +86,7 @@ export const faculties = [
     higherCertificate: {
       title: 'Higher Certificate in Law',
       description: 'An introductory qualification providing foundational legal knowledge and skills for those entering the legal field.',
-      downloadUrl: '/src/assets/Law/iie-higher-certificate-in-legal-studies-full-time-factsheet-2026.pdf',
+      downloadUrl: '/emerisopenday/downloads/iie-higher-certificate-in-legal-studies-full-time-factsheet-2026.pdf',
       modules: [
         // Semester 1
         { code: 'LELS5111', name: 'Legal and Literacy Skills', credits: 15, semester: 1, nqf: 5 },
@@ -101,7 +101,7 @@ export const faculties = [
         { code: 'XBLAW5129', name: 'Work Integrated Learning 1', credits: 15, semester: 0, nqf: 5 },
       ]
     },
-    feesUrl: '/src/assets/fees.pdf'
+    feesUrl: '/emerisopenday/downloads/fees.pdf'
   },
   {
     id: 'commerce',
@@ -112,7 +112,7 @@ export const faculties = [
     degree: {
       title: 'Bachelor of Commerce',
       description: 'A dynamic program covering business, finance, economics, and management, preparing students for successful careers in the corporate world.',
-      downloadUrl: '/src/assets/Commerce/iie-bachelor-of-commerce-full-time-fact-sheet-2026.pdf',
+      downloadUrl: '/emerisopenday/downloads/iie-bachelor-of-commerce-full-time-fact-sheet-2026.pdf',
       modules: [
         { code: 'ACBP5121', name: 'Accounting 1A', credits: 15, semester: 1, nqf: 5 },
         { code: 'APCT5131', name: 'Applied Communication Techniques', credits: 15, semester: 1, nqf: 5 },
@@ -127,7 +127,7 @@ export const faculties = [
     higherCertificate: {
       title: 'Higher Certificate in Commerce',
       description: 'A foundational business qualification providing essential skills in commerce, accounting, and business management.',
-      downloadUrl: '/src/assets/Commerce/iie-higher-certificate-in-business-principles-and-practice.pdf',
+      downloadUrl: '/emerisopenday/downloads/iie-higher-certificate-in-business-principles-and-practice.pdf',
       modules: [
         { code: 'IQTT5111', name: 'Introduction to Quantitative Techniques and Techniques', credits: 15, semester: 1, nqf: 5 },
         { code: 'INAC5111', name: 'Introduction to Accounting 1A', credits: 15, semester: 1, nqf: 5 },
@@ -139,7 +139,7 @@ export const faculties = [
         { code: 'XBPP5129', name: 'Work Integrated Learning', credits: 15, semester: 2, nqf: 5 },
       ]
     },
-    feesUrl: '/src/assets/fees.pdf'
+    feesUrl: '/emerisopenday/downloads/fees.pdf'
   },
   {
     id: 'humanities',
@@ -150,7 +150,7 @@ export const faculties = [
     degree: {
       title: 'Bachelor of Arts in Humanities',
       description: 'A diverse program exploring literature, history, philosophy, and social sciences, developing critical thinking and cultural awareness.',
-      downloadUrl: '/src/assets/Humanities/iie-bachelor-of-arts-full-time-fact-sheet-2026.pdf',
+      downloadUrl: '/emerisopenday/downloads/iie-bachelor-of-arts-full-time-fact-sheet-2026.pdf',
       modules: [
         // Semester 1
         { code: 'ENGL5121', name: 'English 1A: Introduction to English Studies', credits: 15, semester: 1, nqf: 5 },
@@ -167,7 +167,7 @@ export const faculties = [
     higherCertificate: {
       title: 'Higher Certificate in Humanities',
       description: 'An introductory program providing foundational knowledge in humanities subjects and developing analytical skills.',
-      downloadUrl: '/src/assets/Humanities/iie-higher-certificate-in-communication-practices-full-time-fact-sheet-2026.pdf',
+      downloadUrl: '/emerisopenday/downloads/iie-higher-certificate-in-communication-practices-full-time-fact-sheet-2026.pdf',
       modules: [
         // Semester 1
         { code: 'APCT5131', name: 'Applied Communication Techniques', credits: 15, semester: 1, nqf: 5 },
@@ -181,7 +181,7 @@ export const faculties = [
         { code: 'XCOP5112', name: 'Work Integrated Learning', credits: 15, semester: 2, nqf: 5 },
       ]
     },
-    feesUrl: '/src/assets/fees.pdf'
+    feesUrl: '/emerisopenday/downloads/fees.pdf'
   }
 ];
 
