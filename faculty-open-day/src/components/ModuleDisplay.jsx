@@ -14,18 +14,18 @@ const ModuleDisplay = ({ higherCertModules, degreeModules, facultyColor }) => {
 
   const colorClasses = {
     education: {
-      tab: 'border-blue-500 text-blue-600',
-      tabHover: 'hover:border-blue-300 hover:text-blue-500',
-      cardFront: 'bg-gradient-to-br from-blue-500 to-blue-600',
-      cardBack: 'bg-gradient-to-br from-blue-600 to-cyan-600',
-      badge: 'bg-blue-100 text-blue-700',
-    },
-    law: {
       tab: 'border-purple-500 text-purple-600',
       tabHover: 'hover:border-purple-300 hover:text-purple-500',
       cardFront: 'bg-gradient-to-br from-purple-500 to-purple-600',
       cardBack: 'bg-gradient-to-br from-purple-600 to-pink-600',
       badge: 'bg-purple-100 text-purple-700',
+    },
+    law: {
+      tab: 'border-blue-500 text-blue-600',
+      tabHover: 'hover:border-blue-300 hover:text-blue-500',
+      cardFront: 'bg-gradient-to-br from-blue-500 to-blue-600',
+      cardBack: 'bg-gradient-to-br from-blue-600 to-cyan-600',
+      badge: 'bg-blue-100 text-blue-700',
     },
     commerce: {
       tab: 'border-green-500 text-green-600',

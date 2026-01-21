@@ -29,7 +29,7 @@ const Law = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-purple-700 to-pink-700"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-cyan-700"></div>
 
         {/* Interactive Particles - Hexagonal Grid */}
         {init && (
@@ -46,7 +46,7 @@ const Law = () => {
             <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
               {faculty.name}
             </h1>
-            <p className="text-xl md:text-2xl text-purple-100 leading-relaxed">
+            <p className="text-xl md:text-2xl text-blue-100 leading-relaxed">
               {faculty.description}
             </p>
           </div>

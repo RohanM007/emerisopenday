@@ -33,20 +33,20 @@ const ModuleDisplayEducation = ({ higherCertModules, degreeModules }) => {
   }, {});
 
   const categoryColors = {
-    'Professional Subjects': 'bg-blue-50 border-blue-200 text-blue-900',
-    'Professional Themes': 'bg-cyan-50 border-cyan-200 text-cyan-900',
+    'Professional Subjects': 'bg-purple-50 border-purple-200 text-purple-900',
+    'Professional Themes': 'bg-pink-50 border-pink-200 text-pink-900',
     'Professional Didactics I': 'bg-indigo-50 border-indigo-200 text-indigo-900',
     'Year Long': 'bg-purple-50 border-purple-200 text-purple-900',
-    'Core Modules': 'bg-blue-50 border-blue-200 text-blue-900',
+    'Core Modules': 'bg-purple-50 border-purple-200 text-purple-900',
     'Electives - First Additional Languages': 'bg-green-50 border-green-200 text-green-900',
   };
 
   const categoryHeaderColors = {
-    'Professional Subjects': 'bg-blue-500 hover:bg-blue-600',
-    'Professional Themes': 'bg-cyan-500 hover:bg-cyan-600',
+    'Professional Subjects': 'bg-purple-500 hover:bg-purple-600',
+    'Professional Themes': 'bg-pink-500 hover:bg-pink-600',
     'Professional Didactics I': 'bg-indigo-500 hover:bg-indigo-600',
     'Year Long': 'bg-purple-500 hover:bg-purple-600',
-    'Core Modules': 'bg-blue-500 hover:bg-blue-600',
+    'Core Modules': 'bg-purple-500 hover:bg-purple-600',
     'Electives - First Additional Languages': 'bg-green-500 hover:bg-green-600',
   };
 

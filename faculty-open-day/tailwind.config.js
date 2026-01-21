@@ -8,14 +8,14 @@ module.exports = {
     extend: {
       colors: {
         education: {
-          light: '#E3F2FD',
-          DEFAULT: '#2196F3',
-          dark: '#1976D2',
-        },
-        law: {
           light: '#F3E5F5',
           DEFAULT: '#9C27B0',
           dark: '#7B1FA2',
+        },
+        law: {
+          light: '#E3F2FD',
+          DEFAULT: '#2196F3',
+          dark: '#1976D2',
         },
         commerce: {
           light: '#E8F5E9',

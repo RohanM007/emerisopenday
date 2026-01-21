@@ -4,18 +4,18 @@ import { ArrowRight, BookOpen, Award } from 'lucide-react';
 const FacultyCard = ({ faculty }) => {
   const colorClasses = {
     education: {
-      gradient: 'from-blue-500 to-cyan-600',
-      bg: 'bg-blue-50',
-      text: 'text-blue-600',
-      border: 'border-blue-200',
-      hover: 'hover:shadow-blue-500/30'
-    },
-    law: {
       gradient: 'from-purple-500 to-pink-600',
       bg: 'bg-purple-50',
       text: 'text-purple-600',
       border: 'border-purple-200',
       hover: 'hover:shadow-purple-500/30'
+    },
+    law: {
+      gradient: 'from-blue-500 to-cyan-600',
+      bg: 'bg-blue-50',
+      text: 'text-blue-600',
+      border: 'border-blue-200',
+      hover: 'hover:shadow-blue-500/30'
     },
     commerce: {
       gradient: 'from-green-500 to-emerald-600',
