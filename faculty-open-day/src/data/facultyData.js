@@ -6,7 +6,7 @@ export const faculties = [
     color: 'education',
     description: 'Empowering future educators and leaders in learning',
     degree: {
-      title: 'Bachelor of Education',
+      title: 'Bachelor of Education Of Education In Intermediate Phase Teaching',
       description: 'A comprehensive program designed to prepare aspiring teachers with the knowledge, skills, and practical experience needed to excel in modern educational environments.',
       downloadUrl: '/emerisopenday/downloads/iie-bachelor-of-education-in-intermediate-phase-teaching-full-time-factsheet-2026.pdf',
       modules: [
@@ -67,7 +67,7 @@ export const faculties = [
     color: 'law',
     description: 'Shaping legal minds and champions of justice',
     degree: {
-      title: 'Bachelor of Laws (LLB)',
+      title: 'IIE Bachelor of Commerce in Law',
       description: 'A rigorous program that provides comprehensive legal education, critical thinking skills, and practical training for aspiring legal professionals.',
       downloadUrl: '/emerisopenday/downloads/iie-bachelor-of-commerce-in-law-full-time-factsheet-2026-v1.pdf',
       modules: [
@@ -84,7 +84,7 @@ export const faculties = [
       ]
     },
     higherCertificate: {
-      title: 'Higher Certificate in Law',
+      title: 'IIE Higher Certificate in Legal Studies',
       description: 'An introductory qualification providing foundational legal knowledge and skills for those entering the legal field.',
       downloadUrl: '/emerisopenday/downloads/iie-higher-certificate-in-legal-studies-full-time-factsheet-2026.pdf',
       modules: [
@@ -110,7 +110,7 @@ export const faculties = [
     color: 'commerce',
     description: 'Building business leaders and economic innovators',
     degree: {
-      title: 'Bachelor of Commerce',
+      title: 'IIE Bachelor of Commerce',
       description: 'A dynamic program covering business, finance, economics, and management, preparing students for successful careers in the corporate world.',
       downloadUrl: '/emerisopenday/downloads/iie-bachelor-of-commerce-full-time-fact-sheet-2026.pdf',
       modules: [
@@ -125,7 +125,7 @@ export const faculties = [
       ]
     },
     higherCertificate: {
-      title: 'Higher Certificate in Commerce',
+      title: 'IIE Higher Certificate in Business Principles and Practice',
       description: 'A foundational business qualification providing essential skills in commerce, accounting, and business management.',
       downloadUrl: '/emerisopenday/downloads/iie-higher-certificate-in-business-principles-and-practice.pdf',
       modules: [
@@ -148,7 +148,7 @@ export const faculties = [
     color: 'humanities',
     description: 'Exploring human culture, society, and expression',
     degree: {
-      title: 'Bachelor of Arts in Humanities',
+      title: 'IIE Bachelor of Arts',
       description: 'A diverse program exploring literature, history, philosophy, and social sciences, developing critical thinking and cultural awareness.',
       downloadUrl: '/emerisopenday/downloads/iie-bachelor-of-arts-full-time-fact-sheet-2026.pdf',
       modules: [
@@ -165,7 +165,7 @@ export const faculties = [
       ]
     },
     higherCertificate: {
-      title: 'Higher Certificate in Humanities',
+      title: 'IIE Higher Certificate in Communication Practices',
       description: 'An introductory program providing foundational knowledge in humanities subjects and developing analytical skills.',
       downloadUrl: '/emerisopenday/downloads/iie-higher-certificate-in-communication-practices-full-time-fact-sheet-2026.pdf',
       modules: [
