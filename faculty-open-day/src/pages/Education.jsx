@@ -25,21 +25,21 @@ const Education = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 relative">
+      {/* Interactive Particles - Full Page */}
+      {init && (
+        <Particles
+          id="tsparticles-education"
+          particlesLoaded={particlesLoaded}
+          options={educationParticles}
+          className="fixed inset-0 z-0"
+        />
+      )}
+
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         {/* Gradient Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500 via-purple-600 to-pink-700"></div>
-
-        {/* Interactive Particles - Knowledge Network */}
-        {init && (
-          <Particles
-            id="tsparticles-education"
-            particlesLoaded={particlesLoaded}
-            options={educationParticles}
-            className="absolute inset-0"
-          />
-        )}
 
         <div className="container mx-auto px-4 py-20 md:py-28 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
@@ -62,7 +62,7 @@ const Education = () => {
       />
 
       {/* Programs Section */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 relative z-10">
         <div className="max-w-5xl mx-auto space-y-8">
           {/* Degree Program */}
           <ProgramSection

@@ -17,7 +17,7 @@ const ModuleDisplayLaw = ({ degreeModules, higherCertModules }) => {
   const yearLong = modules.filter(m => m.semester === 0);
 
   return (
-    <div className="py-16 bg-gradient-to-br from-blue-50 via-cyan-50 to-blue-50">
+    <div className="py-16 relative z-10">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">

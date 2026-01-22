@@ -47,7 +47,7 @@ const ModuleDisplay = ({ higherCertModules, degreeModules, facultyColor }) => {
   const modules = activeTab === 'degree' ? degreeModules : higherCertModules;
 
   return (
-    <div className="py-16 bg-white">
+    <div className="py-16 relative z-10">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">

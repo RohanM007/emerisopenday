@@ -28,7 +28,7 @@ const ModuleDisplayHumanities = ({ degreeModules, higherCertModules }) => {
   const getBookColor = (index) => bookColors[index % bookColors.length];
 
   return (
-    <div className="py-16 bg-gradient-to-br from-amber-50 via-orange-50 to-red-50">
+    <div className="py-16 relative z-10">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
