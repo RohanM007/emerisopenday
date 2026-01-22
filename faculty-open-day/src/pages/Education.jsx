@@ -5,7 +5,7 @@ import ProgramSection from '../components/ProgramSection';
 import DownloadButton from '../components/DownloadButton';
 import ModuleDisplayEducation from '../components/ModuleDisplayEducation';
 import { getFacultyById } from '../data/facultyData';
-import { BookOpen, Award, DollarSign } from 'lucide-react';
+import { BookOpen, Award, DollarSign, MapPin, Users, Heart } from 'lucide-react';
 import { educationParticles } from '../config/particlesConfig';
 
 const Education = () => {
@@ -61,9 +61,105 @@ const Education = () => {
         higherCertModules={faculty.higherCertificate.modules}
       />
 
-      {/* Programs Section */}
+      {/* What B.Ed Offers Section */}
       <div className="container mx-auto px-4 py-12 relative z-10">
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl shadow-lg p-8 border-2 border-purple-200">
+            <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+              What B.Ed Offers
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Field Trips */}
+              <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="flex justify-center mb-4">
+                  <div className="bg-purple-100 p-3 rounded-full">
+                    <MapPin className="text-purple-600" size={28} />
+                  </div>
+                </div>
+                <h4 className="text-lg font-bold text-gray-800 mb-2 text-center">
+                  Exciting Beyond the Curriculum Field Trips
+                </h4>
+                <p className="text-gray-600 text-sm text-center">
+                  Explore educational sites and gain real-world learning experiences
+                </p>
+              </div>
+
+              {/* Teaching Experience */}
+              <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="flex justify-center mb-4">
+                  <div className="bg-pink-100 p-3 rounded-full">
+                    <Users className="text-pink-600" size={28} />
+                  </div>
+                </div>
+                <h4 className="text-lg font-bold text-gray-800 mb-2 text-center">
+                  Teaching Experience
+                </h4>
+                <p className="text-gray-600 text-sm text-center">
+                  Hands-on classroom practice to develop your teaching skills
+                </p>
+              </div>
+
+              {/* Service Learning */}
+              <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="flex justify-center mb-4">
+                  <div className="bg-purple-100 p-3 rounded-full">
+                    <Heart className="text-purple-600" size={28} />
+                  </div>
+                </div>
+                <h4 className="text-lg font-bold text-gray-800 mb-2 text-center">
+                  Service Learning & Community Outreach
+                </h4>
+                <p className="text-gray-600 text-sm text-center">
+                  Make a difference through community engagement initiatives
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Excursion Suggestions Form */}
+      <div className="container mx-auto px-4 pb-12 relative z-10">
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-white rounded-xl shadow-lg p-8 border-2 border-purple-200">
+            <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">
+              Suggest an Excursion
+            </h3>
+            <p className="text-gray-600 mb-6 text-center">
+              Have an idea for an exciting educational excursion? Share your suggestions with us!
+            </p>
+
+            {/* Google Form Embed */}
+            <div className="max-w-3xl mx-auto">
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdXx73f0danRawEuY27ONHh0HeDVHVFJazc_w0oJTZwNWH2uQ/viewform?embedded=true"
+                width="100%"
+                height="600"
+                frameBorder="0"
+                marginHeight="0"
+                marginWidth="0"
+                className="rounded-lg"
+              >
+                Loading…
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Downloads Section - At the Bottom */}
+      <div className="container mx-auto px-4 pb-12 relative z-10">
         <div className="max-w-5xl mx-auto space-y-8">
+          {/* Section Header */}
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+              Program Information & Downloads
+            </h2>
+            <p className="text-gray-600">
+              Download detailed information about our programs and fees
+            </p>
+          </div>
+
           {/* Degree Program */}
           <ProgramSection
             title={faculty.degree.title}
