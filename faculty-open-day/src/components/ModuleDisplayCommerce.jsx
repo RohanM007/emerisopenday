@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BookOpen, Calendar, Award, RotateCw } from 'lucide-react';
+import { Calendar, Award, RotateCw } from 'lucide-react';
 
 const ModuleDisplayCommerce = ({ higherCertModules, degreeModules }) => {
   const [activeTab, setActiveTab] = useState('degree');
@@ -13,6 +13,68 @@ const ModuleDisplayCommerce = ({ higherCertModules, degreeModules }) => {
   };
 
   const modules = activeTab === 'degree' ? degreeModules : higherCertModules;
+
+  // Function to get emoji based on module name/code
+  const getModuleEmoji = (moduleName, moduleCode) => {
+    const name = moduleName.toLowerCase();
+    const code = moduleCode.toLowerCase();
+
+    if (name.includes('accounting') || code.includes('ac')) return '💰';
+    if (name.includes('business management') || name.includes('administration')) return '📊';
+    if (name.includes('economics') || code.includes('pmic') || code.includes('pmac')) return '📈';
+    if (name.includes('marketing')) return '🎯';
+    if (name.includes('communication')) return '💬';
+    if (name.includes('quantitative')) return '🔢';
+    if (name.includes('digital') || name.includes('software')) return '💻';
+    if (name.includes('project management')) return '📋';
+    if (name.includes('work integrated')) return '🎓';
+    return '📚';
+  };
+
+  // Function to get color gradient based on module type
+  const getModuleColors = (moduleName, moduleCode) => {
+    const name = moduleName.toLowerCase();
+    const code = moduleCode.toLowerCase();
+
+    // Accounting - Gold/Amber
+    if (name.includes('accounting') || code.includes('ac')) {
+      return { front: 'from-amber-500 to-yellow-600', back: 'from-amber-600 to-yellow-700' };
+    }
+    // Business Management - Green
+    if (name.includes('business management') || name.includes('administration')) {
+      return { front: 'from-green-500 to-emerald-600', back: 'from-green-600 to-emerald-700' };
+    }
+    // Economics - Blue
+    if (name.includes('economics') || code.includes('pmic') || code.includes('pmac')) {
+      return { front: 'from-blue-500 to-cyan-600', back: 'from-blue-600 to-cyan-700' };
+    }
+    // Marketing - Purple/Pink
+    if (name.includes('marketing')) {
+      return { front: 'from-purple-500 to-pink-600', back: 'from-purple-600 to-pink-700' };
+    }
+    // Communication - Teal
+    if (name.includes('communication')) {
+      return { front: 'from-teal-500 to-cyan-600', back: 'from-teal-600 to-cyan-700' };
+    }
+    // Quantitative - Indigo
+    if (name.includes('quantitative')) {
+      return { front: 'from-indigo-500 to-blue-600', back: 'from-indigo-600 to-blue-700' };
+    }
+    // Digital/Software - Slate/Gray
+    if (name.includes('digital') || name.includes('software')) {
+      return { front: 'from-slate-600 to-gray-700', back: 'from-slate-700 to-gray-800' };
+    }
+    // Project Management - Orange
+    if (name.includes('project management')) {
+      return { front: 'from-orange-500 to-red-600', back: 'from-orange-600 to-red-700' };
+    }
+    // Work Integrated Learning - Rose
+    if (name.includes('work integrated')) {
+      return { front: 'from-rose-500 to-pink-600', back: 'from-rose-600 to-pink-700' };
+    }
+    // Default - Green
+    return { front: 'from-green-500 to-green-600', back: 'from-green-600 to-emerald-700' };
+  };
 
   return (
     <div className="py-16 bg-white">
@@ -62,6 +124,10 @@ const ModuleDisplayCommerce = ({ higherCertModules, degreeModules }) => {
             const nameLength = module.name.length;
             const textSize = nameLength > 40 ? 'text-base' : nameLength > 30 ? 'text-lg' : 'text-xl';
 
+            // Get colors and emoji for this module
+            const colors = getModuleColors(module.name, module.code);
+            const emoji = getModuleEmoji(module.name, module.code);
+
             return (
             <div
               key={module.code}
@@ -74,25 +140,26 @@ const ModuleDisplayCommerce = ({ higherCertModules, degreeModules }) => {
                 }`}
                 onClick={() => toggleFlip(module.code)}
               >
-                {/* Front of Card - Enhanced with Patterns */}
+                {/* Front of Card - Color-coded with Emoji */}
                 <div className="absolute w-full h-full backface-hidden rounded-xl shadow-lg overflow-hidden commerce-card-front">
-                  {/* Diagonal Stripe Pattern */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-green-600"></div>
+                  {/* Dynamic Color Gradient */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${colors.front}`}></div>
                   <div className="absolute inset-0 opacity-20 commerce-stripes"></div>
-                  
+
                   {/* Corner Accent */}
                   <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-bl-full"></div>
                   <div className="absolute bottom-0 left-0 w-24 h-24 bg-black/10 rounded-tr-full"></div>
-                  
+
                   {/* Decorative Lines */}
                   <div className="absolute top-4 left-4 w-12 h-1 bg-white/30"></div>
                   <div className="absolute top-7 left-4 w-8 h-1 bg-white/30"></div>
-                  
+
                   {/* Content */}
                   <div className="relative h-full flex flex-col items-center justify-center text-white p-6">
                     <div className="text-center">
-                      <div className="mb-4 opacity-20">
-                        <BookOpen className="w-16 h-16 mx-auto" strokeWidth={1.5} />
+                      {/* Emoji Icon */}
+                      <div className="mb-4 text-6xl drop-shadow-lg">
+                        {emoji}
                       </div>
                       <h3 className="text-4xl font-bold mb-4 tracking-wider drop-shadow-lg">
                         {module.code}
@@ -103,15 +170,15 @@ const ModuleDisplayCommerce = ({ higherCertModules, degreeModules }) => {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Border Glow */}
                   <div className="absolute inset-0 rounded-xl border-2 border-white/20"></div>
                 </div>
 
-                {/* Back of Card - Enhanced with Geometric Elements */}
+                {/* Back of Card - Matching Color */}
                 <div className="absolute w-full h-full backface-hidden rounded-xl shadow-lg overflow-hidden rotate-y-180 commerce-card-back">
-                  {/* Gradient Background */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-green-600 to-emerald-600"></div>
+                  {/* Dynamic Color Gradient - Darker shade */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${colors.back}`}></div>
                   
                   {/* Geometric Pattern Overlay */}
                   <div className="absolute inset-0 opacity-10 commerce-dots"></div>
