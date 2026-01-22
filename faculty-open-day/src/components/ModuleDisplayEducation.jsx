@@ -55,12 +55,14 @@ const ModuleDisplayEducation = ({ higherCertModules, degreeModules }) => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            First Year Modules
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Explore the modules you'll study in your first year
-          </p>
+          <div className="inline-block bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl px-8 py-6 border-2 border-purple-200 shadow-lg">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
+              First Year Modules
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl">
+              Explore the modules you'll study in your first year
+            </p>
+          </div>
         </div>
 
         {/* Tabs */}

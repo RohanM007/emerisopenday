@@ -32,13 +32,15 @@ const ModuleDisplayHumanities = ({ degreeModules, higherCertModules }) => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="flex items-center justify-center mb-4">
-            <Library className="w-12 h-12 text-amber-700 mr-3" />
-            <h2 className="text-4xl font-bold text-gray-900">Module Library</h2>
+          <div className="inline-block bg-gradient-to-r from-orange-50 to-red-50 rounded-xl px-8 py-6 border-2 border-orange-200 shadow-lg">
+            <div className="flex items-center justify-center mb-3">
+              <Library className="w-12 h-12 text-amber-700 mr-3" />
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900">Module Library</h2>
+            </div>
+            <p className="text-lg text-gray-600 max-w-2xl">
+              Click on any book to pull it from the shelf and view module details
+            </p>
           </div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Click on any book to pull it from the shelf and view module details
-          </p>
         </div>
 
         {/* Tabs */}
