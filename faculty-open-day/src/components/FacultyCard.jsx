@@ -62,19 +62,21 @@ const FacultyCard = ({ faculty }) => {
                 <BookOpen className={colors.text} size={20} />
               </div>
               <div>
-                <h3 className="font-bold text-gray-800">Degree Program</h3>
+                <h3 className="font-bold text-gray-800">{faculty.degree.title}</h3>
                 <p className="text-sm text-gray-600">Comprehensive bachelor's degree</p>
               </div>
             </div>
-            <div className="flex items-start gap-3">
-              <div className={`${colors.bg} p-2 rounded-lg`}>
-                <Award className={colors.text} size={20} />
+            {faculty.higherCertificate && (
+              <div className="flex items-start gap-3">
+                <div className={`${colors.bg} p-2 rounded-lg`}>
+                  <Award className={colors.text} size={20} />
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-800">{faculty.higherCertificate.title}</h3>
+                  <p className="text-sm text-gray-600">Foundation qualification</p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-bold text-gray-800">Higher Certificate</h3>
-                <p className="text-sm text-gray-600">Foundation qualification</p>
-              </div>
-            </div>
+            )}
           </div>
 
           {/* CTA Button */}
