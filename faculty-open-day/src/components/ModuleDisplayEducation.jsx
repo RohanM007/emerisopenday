@@ -230,8 +230,8 @@ const ModuleDisplayEducation = ({ higherCertModules, degreeModules }) => {
             </div>
           </div>
 
-          {/* Categorized Accordions */}
-          {Object.entries(groupedModules).map(([category, semesters]) => (
+          {/* Categorized Accordions - Only show for Higher Certificate */}
+          {activeTab === 'certificate' && Object.entries(groupedModules).map(([category, semesters]) => (
             <div key={category} className="border-2 border-gray-200 rounded-xl overflow-hidden shadow-md">
               {/* Accordion Header */}
               <button

@@ -12,7 +12,7 @@ export const faculties = [
       modules: [
         // Professional Subjects - Semester 1
         { code: 'INPCF110', name: 'Introduction to Personal Computing', credits: 5, semester: 1, nqf: 5, category: 'Professional Subjects' },
-        { code: 'FAFR6121/FALX6121/FALZ6121/FALN6111', name: 'First Additional Languages: Afrikaans/IsiXhosa/IsiZulu/Northern Sotho', credits: 12, semester: 1, nqf: 6, category: 'Professional Subjects' },
+        { code: 'FAFR6121/FALZ6121', name: 'First Additional Languages: Afrikaans/IsiZulu', credits: 12, semester: 1, nqf: 6, category: 'Professional Subjects' },
         { code: 'ITSA5111', name: 'Introduction to Scholarship A', credits: 8, semester: 1, nqf: 5, category: 'Professional Subjects' },
         // Professional Themes - Semester 1
         { code: 'PSED5111', name: 'Psychology for Educators 1A', credits: 12, semester: 1, nqf: 5, category: 'Professional Themes' },
@@ -23,7 +23,7 @@ export const faculties = [
 
         // Professional Subjects - Semester 2
         { code: 'ENED6122', name: 'English for Education 1', credits: 12, semester: 2, nqf: 6, category: 'Professional Subjects' },
-        { code: 'COLA5112/COLX5112/COLZ5112/COLN5112', name: 'Communicative Languages: Afrikaans/IsiXhosa/IsiZulu/Northern Sotho', credits: 12, semester: 2, nqf: 5, category: 'Professional Subjects' },
+        { code: 'COLA5112/COLZ5112', name: 'Communicative Languages: Afrikaans/IsiZulu', credits: 12, semester: 2, nqf: 5, category: 'Professional Subjects' },
         { code: 'IEMS5111', name: 'Introduction to EMS', credits: 5, semester: 2, nqf: 5, category: 'Professional Subjects' },
         // Professional Themes - Semester 2
         { code: 'PSED5112', name: 'Psychology for Educators 1B', credits: 12, semester: 2, nqf: 5, category: 'Professional Themes' },
@@ -32,7 +32,7 @@ export const faculties = [
         { code: 'TNST5112', name: 'TIP* Nat Sciences and Technology 1', credits: 8, semester: 2, nqf: 5, category: 'Professional Didactics I' },
 
         // Year Long
-        { code: 'TEIP5119', name: 'Teaching Experience 1', credits: 6, semester: 0, nqf: 5, category: 'Year Long' },
+        { code: 'TEIP5119', name: 'Teaching Experience 1 (Compulsory)', credits: 12, semester: 0, nqf: 5, category: 'Year Long' },
       ]
     },
     higherCertificate: {
@@ -52,8 +52,6 @@ export const faculties = [
         { code: 'XCOP5112', name: 'Work Integrated Learning', credits: 15, semester: 2, nqf: 5, category: 'Core Modules' },
 
         // Electives - First Additional Languages (Students choose one)
-        { code: 'FALN5112', name: 'First Additional Language Northern Sotho', credits: 15, semester: 0, nqf: 5, category: 'Electives - First Additional Languages' },
-        { code: 'FALX5112', name: 'First Additional Language isiXhosa', credits: 15, semester: 0, nqf: 5, category: 'Electives - First Additional Languages' },
         { code: 'FALZ5112', name: 'First Additional Language isiZulu', credits: 15, semester: 0, nqf: 5, category: 'Electives - First Additional Languages' },
         { code: 'FAFR5112', name: 'First Additional Language Afrikaans', credits: 15, semester: 0, nqf: 5, category: 'Electives - First Additional Languages' },
       ]
