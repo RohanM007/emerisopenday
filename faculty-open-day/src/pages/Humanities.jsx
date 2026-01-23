@@ -38,15 +38,19 @@ const Humanities = () => {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-600 via-orange-700 to-red-700"></div>
+        {/* Gradient Background with Literary Colors */}
+        <div className="absolute inset-0 bg-gradient-to-br from-humanities-burgundy via-humanities-gold to-humanities-coral"></div>
+
+        {/* Decorative Quote Marks */}
+        <div className="absolute top-10 left-10 text-humanities-cream opacity-20 text-9xl font-playfair pointer-events-none">"</div>
+        <div className="absolute bottom-10 right-10 text-humanities-cream opacity-20 text-9xl font-playfair pointer-events-none">"</div>
 
         <div className="container mx-auto px-4 py-20 md:py-28 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight font-playfair">
               {faculty.name}
             </h1>
-            <p className="text-xl md:text-2xl text-orange-100 leading-relaxed">
+            <p className="text-xl md:text-2xl text-humanities-cream leading-relaxed font-crimson italic">
               {faculty.description}
             </p>
           </div>

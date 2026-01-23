@@ -32,12 +32,12 @@ const ModuleDisplayHumanities = ({ degreeModules, higherCertModules }) => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-block bg-gradient-to-r from-orange-50 to-red-50 rounded-xl px-8 py-6 border-2 border-orange-200 shadow-lg">
+          <div className="inline-block bg-gradient-to-r from-humanities-cream to-amber-50 rounded-xl px-8 py-6 border-4 border-humanities-gold shadow-2xl">
             <div className="flex items-center justify-center mb-3">
-              <Library className="w-12 h-12 text-amber-700 mr-3" />
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900">Module Library</h2>
+              <Library className="w-12 h-12 text-humanities-burgundy mr-3" />
+              <h2 className="text-4xl md:text-5xl font-bold text-humanities-burgundy font-playfair">Module Library</h2>
             </div>
-            <p className="text-lg text-gray-600 max-w-2xl">
+            <p className="text-lg text-gray-700 max-w-2xl font-crimson italic">
               Click on any book to pull it from the shelf and view module details
             </p>
           </div>
@@ -48,20 +48,20 @@ const ModuleDisplayHumanities = ({ degreeModules, higherCertModules }) => {
           <div className="inline-flex bg-white rounded-lg shadow-md p-1">
             <button
               onClick={() => setActiveTab('degree')}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 font-quicksand ${
                 activeTab === 'degree'
-                  ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white shadow-lg'
-                  : 'text-gray-600 hover:text-orange-600'
+                  ? 'bg-gradient-to-r from-humanities-burgundy to-humanities-gold text-white shadow-lg'
+                  : 'text-gray-600 hover:text-humanities-burgundy'
               }`}
             >
               Degree Year 1
             </button>
             <button
               onClick={() => setActiveTab('certificate')}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 font-quicksand ${
                 activeTab === 'certificate'
-                  ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white shadow-lg'
-                  : 'text-gray-600 hover:text-orange-600'
+                  ? 'bg-gradient-to-r from-humanities-burgundy to-humanities-gold text-white shadow-lg'
+                  : 'text-gray-600 hover:text-humanities-burgundy'
               }`}
             >
               Higher Certificate
@@ -74,12 +74,12 @@ const ModuleDisplayHumanities = ({ degreeModules, higherCertModules }) => {
           <div className="max-w-6xl mx-auto space-y-12">
           {/* Semester 1 Shelf */}
           <div>
-            <h3 className="text-2xl font-bold mb-6 flex items-center text-amber-900">
+            <h3 className="text-2xl font-bold mb-6 flex items-center text-humanities-gold font-playfair">
               <Calendar className="w-6 h-6 mr-3" />
               Semester 1 Shelf
             </h3>
             {/* Shelf Container */}
-            <div className="relative bg-gradient-to-b from-amber-900 to-amber-950 rounded-lg p-3 md:p-6 shadow-2xl overflow-x-auto">
+            <div className="relative bg-gradient-to-b from-humanities-gold to-amber-900 rounded-lg p-3 md:p-6 shadow-2xl overflow-x-auto">
               {/* Books on Shelf */}
               <div className="flex items-end justify-center gap-2 md:gap-3 min-h-[200px] sm:min-h-[240px] md:min-h-[280px] px-2">
               {semester1.map((module, index) => {
@@ -176,18 +176,18 @@ const ModuleDisplayHumanities = ({ degreeModules, higherCertModules }) => {
               })}
               </div>
               {/* Shelf Bottom */}
-              <div className="h-3 bg-gradient-to-b from-amber-950 to-amber-900 rounded-b-lg shadow-inner"></div>
+              <div className="h-3 bg-gradient-to-b from-amber-900 to-humanities-gold rounded-b-lg shadow-inner"></div>
             </div>
           </div>
 
           {/* Semester 2 Shelf */}
           <div>
-            <h3 className="text-2xl font-bold mb-6 flex items-center text-red-900">
+            <h3 className="text-2xl font-bold mb-6 flex items-center text-humanities-gold font-playfair">
               <Calendar className="w-6 h-6 mr-3" />
               Semester 2 Shelf
             </h3>
             {/* Shelf Container */}
-            <div className="relative bg-gradient-to-b from-red-900 to-red-950 rounded-lg p-3 md:p-6 shadow-2xl overflow-x-auto">
+            <div className="relative bg-gradient-to-b from-humanities-gold to-amber-900 rounded-lg p-3 md:p-6 shadow-2xl overflow-x-auto">
               {/* Books on Shelf */}
               <div className="flex items-end justify-center gap-2 md:gap-3 min-h-[200px] sm:min-h-[240px] md:min-h-[280px] px-2">
               {semester2.map((module, index) => {
@@ -284,19 +284,19 @@ const ModuleDisplayHumanities = ({ degreeModules, higherCertModules }) => {
               })}
               </div>
               {/* Shelf Bottom */}
-              <div className="h-3 bg-gradient-to-b from-red-950 to-red-900 rounded-b-lg shadow-inner"></div>
+              <div className="h-3 bg-gradient-to-b from-amber-900 to-humanities-gold rounded-b-lg shadow-inner"></div>
             </div>
           </div>
 
           {/* Year Long Shelf */}
           {yearLong.length > 0 && (
             <div>
-              <h3 className="text-2xl font-bold mb-6 flex items-center text-purple-900">
+              <h3 className="text-2xl font-bold mb-6 flex items-center text-humanities-coral font-playfair">
                 <Calendar className="w-6 h-6 mr-3" />
                 Year Long Shelf
               </h3>
               {/* Shelf Container */}
-              <div className="relative bg-gradient-to-b from-purple-900 to-purple-950 rounded-lg p-3 md:p-6 shadow-2xl overflow-x-auto">
+              <div className="relative bg-gradient-to-b from-humanities-coral to-red-900 rounded-lg p-3 md:p-6 shadow-2xl overflow-x-auto">
                 {/* Books on Shelf */}
                 <div className="flex items-end justify-center gap-2 md:gap-3 min-h-[200px] sm:min-h-[240px] md:min-h-[280px] px-2">
                 {yearLong.map((module, index) => {
@@ -393,16 +393,16 @@ const ModuleDisplayHumanities = ({ degreeModules, higherCertModules }) => {
                 })}
                 </div>
                 {/* Shelf Bottom */}
-                <div className="h-3 bg-gradient-to-b from-purple-950 to-purple-900 rounded-b-lg shadow-inner"></div>
+                <div className="h-3 bg-gradient-to-b from-red-900 to-humanities-coral rounded-b-lg shadow-inner"></div>
               </div>
             </div>
           )}
 
           {/* Total Credits Summary */}
           <div className="mt-12 text-center">
-            <div className="inline-block bg-gradient-to-r from-orange-50 to-red-50 rounded-lg px-8 py-4 border-2 border-orange-200 shadow-lg">
-              <p className="text-gray-600 mb-1 font-medium">Total Credits</p>
-              <p className="text-3xl font-bold text-orange-700">
+            <div className="inline-block bg-gradient-to-r from-humanities-cream to-amber-50 rounded-lg px-8 py-4 border-4 border-humanities-gold shadow-2xl">
+              <p className="text-gray-700 mb-1 font-semibold font-crimson">Total Credits</p>
+              <p className="text-3xl font-bold text-humanities-burgundy font-playfair">
                 {modules.reduce((sum, module) => sum + module.credits, 0)} Credits
               </p>
             </div>
@@ -415,12 +415,12 @@ const ModuleDisplayHumanities = ({ degreeModules, higherCertModules }) => {
           <div className="max-w-6xl mx-auto space-y-12">
             {/* Semester 1 Shelf */}
             <div>
-              <h3 className="text-2xl font-bold mb-6 flex items-center text-amber-900">
+              <h3 className="text-2xl font-bold mb-6 flex items-center text-humanities-gold font-playfair">
                 <Calendar className="w-6 h-6 mr-3" />
                 Semester 1 Shelf
               </h3>
               {/* Shelf Container */}
-              <div className="relative bg-gradient-to-b from-amber-900 to-amber-950 rounded-lg p-3 md:p-6 shadow-2xl overflow-x-auto">
+              <div className="relative bg-gradient-to-b from-humanities-gold to-amber-900 rounded-lg p-3 md:p-6 shadow-2xl overflow-x-auto">
                 {/* Books on Shelf */}
                 <div className="flex items-end justify-center gap-2 md:gap-3 min-h-[200px] sm:min-h-[240px] md:min-h-[280px] px-2">
                 {semester1.map((module, index) => {
@@ -517,18 +517,18 @@ const ModuleDisplayHumanities = ({ degreeModules, higherCertModules }) => {
                 })}
                 </div>
                 {/* Shelf Bottom */}
-                <div className="h-3 bg-gradient-to-b from-amber-950 to-amber-900 rounded-b-lg shadow-inner"></div>
+                <div className="h-3 bg-gradient-to-b from-amber-900 to-humanities-gold rounded-b-lg shadow-inner"></div>
               </div>
             </div>
 
             {/* Semester 2 Shelf */}
             <div>
-              <h3 className="text-2xl font-bold mb-6 flex items-center text-red-900">
+              <h3 className="text-2xl font-bold mb-6 flex items-center text-humanities-gold font-playfair">
                 <Calendar className="w-6 h-6 mr-3" />
                 Semester 2 Shelf
               </h3>
               {/* Shelf Container */}
-              <div className="relative bg-gradient-to-b from-red-900 to-red-950 rounded-lg p-3 md:p-6 shadow-2xl overflow-x-auto">
+              <div className="relative bg-gradient-to-b from-humanities-gold to-amber-900 rounded-lg p-3 md:p-6 shadow-2xl overflow-x-auto">
                 {/* Books on Shelf */}
                 <div className="flex items-end justify-center gap-2 md:gap-3 min-h-[200px] sm:min-h-[240px] md:min-h-[280px] px-2">
                 {semester2.map((module, index) => {
@@ -625,15 +625,15 @@ const ModuleDisplayHumanities = ({ degreeModules, higherCertModules }) => {
                 })}
                 </div>
                 {/* Shelf Bottom */}
-                <div className="h-3 bg-gradient-to-b from-red-950 to-red-900 rounded-b-lg shadow-inner"></div>
+                <div className="h-3 bg-gradient-to-b from-amber-900 to-humanities-gold rounded-b-lg shadow-inner"></div>
               </div>
             </div>
 
             {/* Total Credits Summary */}
             <div className="mt-12 text-center">
-              <div className="inline-block bg-gradient-to-r from-orange-50 to-red-50 rounded-lg px-8 py-4 border-2 border-orange-200 shadow-lg">
-                <p className="text-gray-600 mb-1 font-medium">Total Credits</p>
-                <p className="text-3xl font-bold text-orange-700">
+              <div className="inline-block bg-gradient-to-r from-humanities-cream to-amber-50 rounded-lg px-8 py-4 border-4 border-humanities-gold shadow-2xl">
+                <p className="text-gray-700 mb-1 font-semibold font-crimson">Total Credits</p>
+                <p className="text-3xl font-bold text-humanities-burgundy font-playfair">
                   {modules.reduce((sum, module) => sum + module.credits, 0)} Credits
                 </p>
               </div>
