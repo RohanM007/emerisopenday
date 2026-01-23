@@ -4,6 +4,7 @@ import { loadSlim } from "@tsparticles/slim";
 import ProgramSection from '../components/ProgramSection';
 import DownloadButton from '../components/DownloadButton';
 import ModuleDisplayHumanities from '../components/ModuleDisplayHumanities';
+import HumanitiesCareerGallery from '../components/HumanitiesCareerGallery';
 import { getFacultyById } from '../data/facultyData';
 import { BookOpen, Award, DollarSign } from 'lucide-react';
 import { humanitiesParticles } from '../config/particlesConfig';
@@ -39,7 +40,7 @@ const Humanities = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         {/* Gradient Background with Literary Colors */}
-        <div className="absolute inset-0 bg-gradient-to-br from-humanities-burgundy via-humanities-gold to-humanities-coral"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-red-700 via-red-800 to-red-900"></div>
 
         {/* Decorative Quote Marks */}
         <div className="absolute top-10 left-10 text-humanities-cream opacity-20 text-9xl font-playfair pointer-events-none">"</div>
@@ -64,6 +65,9 @@ const Humanities = () => {
         degreeModules={faculty.degree.modules}
         higherCertModules={faculty.higherCertificate.modules}
       />
+
+      {/* Career Gallery Section */}
+      <HumanitiesCareerGallery />
 
       {/* Programs Section */}
       <div className="container mx-auto px-4 py-12 relative z-10">

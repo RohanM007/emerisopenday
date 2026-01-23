@@ -79,9 +79,9 @@ const ModuleDisplayHumanities = ({ degreeModules, higherCertModules }) => {
               Semester 1 Shelf
             </h3>
             {/* Shelf Container */}
-            <div className="relative bg-gradient-to-b from-humanities-gold to-amber-900 rounded-lg p-3 md:p-6 shadow-2xl overflow-x-auto">
+            <div className="relative bg-gradient-to-b from-humanities-gold to-amber-900 rounded-lg p-3 md:p-4 shadow-2xl overflow-x-auto">
               {/* Books on Shelf */}
-              <div className="flex items-end justify-center gap-2 md:gap-3 min-h-[200px] sm:min-h-[240px] md:min-h-[280px] px-2">
+              <div className="flex items-end justify-center gap-2 md:gap-3 min-h-[180px] sm:min-h-[200px] md:min-h-[220px] px-2">
               {semester1.map((module, index) => {
                 const bookColor = getBookColor(index);
                 const isPulled = pulledBook === module.code;
@@ -92,8 +92,8 @@ const ModuleDisplayHumanities = ({ degreeModules, higherCertModules }) => {
                     <button
                       onClick={() => toggleBook(module.code)}
                       className={`relative ${bookColor.spine} rounded-sm shadow-lg hover:shadow-xl transition-all duration-500 cursor-pointer
-                        ${isPulled ? 'transform -translate-y-8 md:scale-110 z-50' : 'hover:-translate-y-2'}
-                        ${isPulled ? 'w-48 sm:w-56 md:w-64' : 'w-12 sm:w-14 md:w-16'} h-48 sm:h-56 md:h-64`}
+                        ${isPulled ? 'transform -translate-y-6 md:scale-105 z-50' : 'hover:-translate-y-2'}
+                        ${isPulled ? 'w-44 sm:w-52 md:w-60' : 'w-10 sm:w-12 md:w-14'} h-44 sm:h-52 md:h-60`}
                       style={{
                         transformStyle: 'preserve-3d',
                         perspective: '1000px'
@@ -187,9 +187,9 @@ const ModuleDisplayHumanities = ({ degreeModules, higherCertModules }) => {
               Semester 2 Shelf
             </h3>
             {/* Shelf Container */}
-            <div className="relative bg-gradient-to-b from-humanities-gold to-amber-900 rounded-lg p-3 md:p-6 shadow-2xl overflow-x-auto">
+            <div className="relative bg-gradient-to-b from-humanities-gold to-amber-900 rounded-lg p-3 md:p-4 shadow-2xl overflow-x-auto">
               {/* Books on Shelf */}
-              <div className="flex items-end justify-center gap-2 md:gap-3 min-h-[200px] sm:min-h-[240px] md:min-h-[280px] px-2">
+              <div className="flex items-end justify-center gap-2 md:gap-3 min-h-[180px] sm:min-h-[200px] md:min-h-[220px] px-2">
               {semester2.map((module, index) => {
                 const bookColor = getBookColor(index);
                 const isPulled = pulledBook === module.code;
@@ -200,8 +200,8 @@ const ModuleDisplayHumanities = ({ degreeModules, higherCertModules }) => {
                     <button
                       onClick={() => toggleBook(module.code)}
                       className={`relative ${bookColor.spine} rounded-sm shadow-lg hover:shadow-xl transition-all duration-500 cursor-pointer
-                        ${isPulled ? 'transform -translate-y-8 md:scale-110 z-50' : 'hover:-translate-y-2'}
-                        ${isPulled ? 'w-48 sm:w-56 md:w-64' : 'w-12 sm:w-14 md:w-16'} h-48 sm:h-56 md:h-64`}
+                        ${isPulled ? 'transform -translate-y-6 md:scale-105 z-50' : 'hover:-translate-y-2'}
+                        ${isPulled ? 'w-44 sm:w-52 md:w-60' : 'w-10 sm:w-12 md:w-14'} h-44 sm:h-52 md:h-60`}
                       style={{
                         transformStyle: 'preserve-3d',
                         perspective: '1000px'
@@ -296,9 +296,9 @@ const ModuleDisplayHumanities = ({ degreeModules, higherCertModules }) => {
                 Year Long Shelf
               </h3>
               {/* Shelf Container */}
-              <div className="relative bg-gradient-to-b from-humanities-coral to-red-900 rounded-lg p-3 md:p-6 shadow-2xl overflow-x-auto">
+              <div className="relative bg-gradient-to-b from-humanities-coral to-red-900 rounded-lg p-3 md:p-4 shadow-2xl overflow-x-auto">
                 {/* Books on Shelf */}
-                <div className="flex items-end justify-center gap-2 md:gap-3 min-h-[200px] sm:min-h-[240px] md:min-h-[280px] px-2">
+                <div className="flex items-end justify-center gap-2 md:gap-3 min-h-[180px] sm:min-h-[200px] md:min-h-[220px] px-2">
                 {yearLong.map((module, index) => {
                   const bookColor = getBookColor(index);
                   const isPulled = pulledBook === module.code;
@@ -309,8 +309,8 @@ const ModuleDisplayHumanities = ({ degreeModules, higherCertModules }) => {
                       <button
                         onClick={() => toggleBook(module.code)}
                         className={`relative ${bookColor.spine} rounded-sm shadow-lg hover:shadow-xl transition-all duration-500 cursor-pointer
-                          ${isPulled ? 'transform -translate-y-8 md:scale-110 z-50' : 'hover:-translate-y-2'}
-                          ${isPulled ? 'w-48 sm:w-56 md:w-64' : 'w-12 sm:w-14 md:w-16'} h-48 sm:h-56 md:h-64`}
+                          ${isPulled ? 'transform -translate-y-6 md:scale-105 z-50' : 'hover:-translate-y-2'}
+                          ${isPulled ? 'w-44 sm:w-52 md:w-60' : 'w-10 sm:w-12 md:w-14'} h-44 sm:h-52 md:h-60`}
                         style={{
                           transformStyle: 'preserve-3d',
                           perspective: '1000px'
@@ -420,9 +420,9 @@ const ModuleDisplayHumanities = ({ degreeModules, higherCertModules }) => {
                 Semester 1 Shelf
               </h3>
               {/* Shelf Container */}
-              <div className="relative bg-gradient-to-b from-humanities-gold to-amber-900 rounded-lg p-3 md:p-6 shadow-2xl overflow-x-auto">
+              <div className="relative bg-gradient-to-b from-humanities-gold to-amber-900 rounded-lg p-3 md:p-4 shadow-2xl overflow-x-auto">
                 {/* Books on Shelf */}
-                <div className="flex items-end justify-center gap-2 md:gap-3 min-h-[200px] sm:min-h-[240px] md:min-h-[280px] px-2">
+                <div className="flex items-end justify-center gap-2 md:gap-3 min-h-[180px] sm:min-h-[200px] md:min-h-[220px] px-2">
                 {semester1.map((module, index) => {
                   const bookColor = getBookColor(index);
                   const isPulled = pulledBook === module.code;
@@ -433,8 +433,8 @@ const ModuleDisplayHumanities = ({ degreeModules, higherCertModules }) => {
                       <button
                         onClick={() => toggleBook(module.code)}
                         className={`relative ${bookColor.spine} rounded-sm shadow-lg hover:shadow-xl transition-all duration-500 cursor-pointer
-                          ${isPulled ? 'transform -translate-y-8 md:scale-110 z-50' : 'hover:-translate-y-2'}
-                          ${isPulled ? 'w-48 sm:w-56 md:w-64' : 'w-12 sm:w-14 md:w-16'} h-48 sm:h-56 md:h-64`}
+                          ${isPulled ? 'transform -translate-y-6 md:scale-105 z-50' : 'hover:-translate-y-2'}
+                          ${isPulled ? 'w-44 sm:w-52 md:w-60' : 'w-10 sm:w-12 md:w-14'} h-44 sm:h-52 md:h-60`}
                         style={{
                           transformStyle: 'preserve-3d',
                           perspective: '1000px'
@@ -528,9 +528,9 @@ const ModuleDisplayHumanities = ({ degreeModules, higherCertModules }) => {
                 Semester 2 Shelf
               </h3>
               {/* Shelf Container */}
-              <div className="relative bg-gradient-to-b from-humanities-gold to-amber-900 rounded-lg p-3 md:p-6 shadow-2xl overflow-x-auto">
+              <div className="relative bg-gradient-to-b from-humanities-gold to-amber-900 rounded-lg p-3 md:p-4 shadow-2xl overflow-x-auto">
                 {/* Books on Shelf */}
-                <div className="flex items-end justify-center gap-2 md:gap-3 min-h-[200px] sm:min-h-[240px] md:min-h-[280px] px-2">
+                <div className="flex items-end justify-center gap-2 md:gap-3 min-h-[180px] sm:min-h-[200px] md:min-h-[220px] px-2">
                 {semester2.map((module, index) => {
                   const bookColor = getBookColor(index);
                   const isPulled = pulledBook === module.code;
@@ -541,8 +541,8 @@ const ModuleDisplayHumanities = ({ degreeModules, higherCertModules }) => {
                       <button
                         onClick={() => toggleBook(module.code)}
                         className={`relative ${bookColor.spine} rounded-sm shadow-lg hover:shadow-xl transition-all duration-500 cursor-pointer
-                          ${isPulled ? 'transform -translate-y-8 md:scale-110 z-50' : 'hover:-translate-y-2'}
-                          ${isPulled ? 'w-48 sm:w-56 md:w-64' : 'w-12 sm:w-14 md:w-16'} h-48 sm:h-56 md:h-64`}
+                          ${isPulled ? 'transform -translate-y-6 md:scale-105 z-50' : 'hover:-translate-y-2'}
+                          ${isPulled ? 'w-44 sm:w-52 md:w-60' : 'w-10 sm:w-12 md:w-14'} h-44 sm:h-52 md:h-60`}
                         style={{
                           transformStyle: 'preserve-3d',
                           perspective: '1000px'
