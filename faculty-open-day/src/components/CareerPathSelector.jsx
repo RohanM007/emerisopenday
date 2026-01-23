@@ -9,6 +9,7 @@ const CareerPathSelector = ({ preSelectedPath = null, showQuizPrompt = true }) =
   const step2Ref = useRef(null);
   const step3Ref = useRef(null);
   const step4Ref = useRef(null);
+  const selectorRef = useRef(null); // Reference to the specialization selector
 
   const careerPaths = [
     {
@@ -23,10 +24,10 @@ const CareerPathSelector = ({ preSelectedPath = null, showQuizPrompt = true }) =
       description: 'Analyse business environments, set long-term goals, and develop competitive strategies for success, sustainability, and innovation',
       year2_3: ['Project Management', 'Retail Management', 'Supply Chain Management', 'Enterprise Risk Management'],
       jobs: [
-        { title: 'Junior Strategist', salary: 'R350,000 - R600,000/year', icon: '🎯' },
-        { title: 'New Business Developer / Account Manager', salary: 'R400,000 - R700,000/year', icon: '💼' },
-        { title: 'Business Consulting', salary: 'R450,000 - R800,000/year', icon: '📊' },
-        { title: 'General Business Management', salary: 'R500,000 - R900,000/year', icon: '🏢' }
+        { title: 'Junior Strategist', icon: '🎯' },
+        { title: 'New Business Developer / Account Manager', icon: '💼' },
+        { title: 'Business Consulting', icon: '📊' },
+        { title: 'General Business Management', icon: '🏢' }
       ]
     },
     {
@@ -41,10 +42,10 @@ const CareerPathSelector = ({ preSelectedPath = null, showQuizPrompt = true }) =
       description: 'Build technical and analytical skills in managing financial records, reporting, compliance, and interpreting financial statements',
       year2_3: ['Accounting 2A & 2B', 'Accounting 3A & 3B', 'Taxation'],
       jobs: [
-        { title: 'Corporate Accounting', salary: 'R350,000 - R650,000/year', icon: '💰' },
-        { title: 'Financial Manager', salary: 'R450,000 - R800,000/year', icon: '📊' },
-        { title: 'Investment Analyst', salary: 'R400,000 - R750,000/year', icon: '📈' },
-        { title: 'Business Consulting', salary: 'R420,000 - R780,000/year', icon: '💼' }
+        { title: 'Corporate Accounting', icon: '💰' },
+        { title: 'Financial Manager', icon: '📊' },
+        { title: 'Investment Analyst', icon: '📈' },
+        { title: 'Business Consulting', icon: '💼' }
       ]
     },
     {
@@ -59,11 +60,11 @@ const CareerPathSelector = ({ preSelectedPath = null, showQuizPrompt = true }) =
       description: 'Understand customer needs, create value, build strong brands, and design effective marketing strategies that drive business growth',
       year2_3: ['Marketing 2A & 2B', 'Marketing 3A & 3B', 'Digital Marketing'],
       jobs: [
-        { title: 'New Business Developer / Account Manager', salary: 'R380,000 - R700,000/year', icon: '💼' },
-        { title: 'Business Consulting', salary: 'R420,000 - R750,000/year', icon: '📊' },
-        { title: 'Market Research', salary: 'R350,000 - R650,000/year', icon: '🔍' },
-        { title: 'General Management', salary: 'R450,000 - R800,000/year', icon: '🏢' },
-        { title: 'Sales Advisor', salary: 'R320,000 - R600,000/year', icon: '🎯' }
+        { title: 'New Business Developer / Account Manager', icon: '💼' },
+        { title: 'Business Consulting', icon: '📊' },
+        { title: 'Market Research', icon: '🔍' },
+        { title: 'General Management', icon: '🏢' },
+        { title: 'Sales Advisor', icon: '🎯' }
       ]
     },
     {
@@ -78,8 +79,8 @@ const CareerPathSelector = ({ preSelectedPath = null, showQuizPrompt = true }) =
       description: 'Plan, control, and allocate financial resources effectively through investment decisions, capital budgeting, and risk management',
       year2_3: ['Financial Management 2A & 2B', 'Financial Management 3A & 3B', 'Quantitative Techniques'],
       jobs: [
-        { title: 'Financial Manager', salary: 'R500,000 - R950,000/year', icon: '💎' },
-        { title: 'Investment Analyst', salary: 'R450,000 - R850,000/year', icon: '📊' }
+        { title: 'Financial Manager', icon: '💎' },
+        { title: 'Investment Analyst', icon: '📊' }
       ]
     }
   ];
@@ -156,7 +157,7 @@ const CareerPathSelector = ({ preSelectedPath = null, showQuizPrompt = true }) =
         </div>
 
         {/* Step 1: Choose Your Path */}
-        <div className="mb-16">
+        <div className="mb-16" ref={selectorRef}>
           <div className="flex items-center justify-center mb-8">
             <div className="bg-green-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl">
               1
@@ -228,15 +229,8 @@ const CareerPathSelector = ({ preSelectedPath = null, showQuizPrompt = true }) =
               </div>
             </div>
 
-            {/* Connecting Line - Animated */}
+            {/* Connecting Line - Animated (REMOVED - was causing visual issues) */}
             <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-2 bg-gradient-to-b from-gray-200 via-gray-200 to-gray-200 hidden md:block opacity-40 rounded-full"></div>
-              <div
-                className="absolute left-1/2 transform -translate-x-1/2 w-2 bg-gradient-to-b from-green-400 via-emerald-500 to-green-600 hidden md:block transition-all duration-1000 ease-out rounded-full shadow-lg"
-                style={{
-                  height: visibleSteps.has(4) ? '100%' : visibleSteps.has(3) ? '75%' : visibleSteps.has(2) ? '50%' : visibleSteps.has(1) ? '25%' : '0%'
-                }}
-              ></div>
 
               {/* Step 1: Your Choice */}
               <div
@@ -428,13 +422,9 @@ const CareerPathSelector = ({ preSelectedPath = null, showQuizPrompt = true }) =
 
                           <div className="relative z-10">
                             <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">{job.icon}</div>
-                            <h4 className="text-xl md:text-2xl font-bold text-gray-800 mb-4 leading-snug">
+                            <h4 className="text-xl md:text-2xl font-bold text-gray-800 leading-snug">
                               {job.title}
                             </h4>
-                            <div className={`inline-flex items-center gap-2 bg-gradient-to-r ${selectedPathData.color} text-white px-5 py-3 rounded-full font-bold text-sm shadow-lg group-hover:shadow-xl transition-shadow duration-300`}>
-                              <DollarSign size={18} />
-                              {job.salary}
-                            </div>
                           </div>
                         </div>
                       ))}
@@ -445,7 +435,10 @@ const CareerPathSelector = ({ preSelectedPath = null, showQuizPrompt = true }) =
                         onClick={() => {
                           setSelectedPath(null);
                           setVisibleSteps(new Set());
-                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                          // Scroll to the specialization selector instead of top
+                          setTimeout(() => {
+                            selectorRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                          }, 100);
                         }}
                         className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 inline-flex items-center gap-3"
                       >
