@@ -196,18 +196,18 @@ const ModuleDisplayEducation = ({ higherCertModules, degreeModules }) => {
                       <Calendar className="w-5 h-5 mr-2" />
                       Year Long
                     </h4>
-                    <div className="grid grid-cols-1 gap-3">
+                    <div className="grid grid-cols-1 gap-3 overflow-x-auto">
                       {modules
                         .filter(m => m.semester === 0)
                         .map((module) => (
                           <div
                             key={module.code}
-                            className="bg-white rounded-lg p-4 shadow-sm border-2 border-purple-200 hover:shadow-md transition-shadow"
+                            className="bg-white rounded-lg p-4 shadow-sm border-2 border-purple-200 hover:shadow-md transition-shadow min-w-full"
                           >
-                            <div className="flex justify-between items-start">
-                              <div className="flex-1">
-                                <div className="flex items-center gap-3 mb-2">
-                                  <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-bold">
+                            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3">
+                              <div className="flex-1 min-w-0">
+                                <div className="flex flex-wrap items-center gap-3 mb-2">
+                                  <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-bold whitespace-nowrap">
                                     {module.code}
                                   </span>
                                   {module.nqf && (
@@ -216,11 +216,11 @@ const ModuleDisplayEducation = ({ higherCertModules, degreeModules }) => {
                                     </span>
                                   )}
                                 </div>
-                                <h5 className="font-bold text-gray-900">{module.name}</h5>
+                                <h5 className="font-bold text-gray-900 break-words">{module.name}</h5>
                               </div>
-                              <div className="flex items-center ml-4">
+                              <div className="flex items-center sm:ml-4 flex-shrink-0">
                                 <Award className="w-5 h-5 mr-1 text-purple-500" />
-                                <span className="font-bold text-gray-900">{module.credits}</span>
+                                <span className="font-bold text-gray-900 whitespace-nowrap">{module.credits}</span>
                               </div>
                             </div>
                           </div>
