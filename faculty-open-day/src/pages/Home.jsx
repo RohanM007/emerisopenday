@@ -63,12 +63,7 @@ const Home = () => {
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-6">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center space-y-2">
-            <img
-              src={emerisLogo}
-              alt="Emeris Logo"
-              className="h-8 object-contain opacity-80"
-            />
+          <div className="flex flex-col items-center">
             <p className="text-gray-400 text-sm text-center">
               © 2026 Emeris Pietermaritzburg. All rights reserved.
             </p>

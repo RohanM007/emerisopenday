@@ -58,22 +58,22 @@ const FacultyCard = ({ faculty }) => {
           {/* Programs Info */}
           <div className="space-y-4 mb-6">
             <div className="flex items-start gap-3">
-              <div className={`${colors.bg} p-2 rounded-lg`}>
+              <div className={`${colors.bg} p-2 rounded-lg flex-shrink-0`}>
                 <BookOpen className={colors.text} size={20} />
               </div>
               <div>
-                <h3 className="font-bold text-gray-800">{faculty.degree.title}</h3>
-                <p className="text-sm text-gray-600">Comprehensive bachelor's degree</p>
+                <h3 className="font-bold text-gray-800 mb-1">{faculty.degree.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{faculty.degree.description}</p>
               </div>
             </div>
             {faculty.higherCertificate && (
               <div className="flex items-start gap-3">
-                <div className={`${colors.bg} p-2 rounded-lg`}>
+                <div className={`${colors.bg} p-2 rounded-lg flex-shrink-0`}>
                   <Award className={colors.text} size={20} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-800">{faculty.higherCertificate.title}</h3>
-                  <p className="text-sm text-gray-600">Foundation qualification</p>
+                  <h3 className="font-bold text-gray-800 mb-1">{faculty.higherCertificate.title}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{faculty.higherCertificate.description}</p>
                 </div>
               </div>
             )}
