@@ -288,11 +288,11 @@ const HumanitiesCareerGallery = () => {
                     onMouseEnter={() => setHoveredCareer(career.id)}
                     onMouseLeave={() => setHoveredCareer(null)}
                     className={`relative transition-all duration-500 transform ${depthTranslate} ${
-                      isHovered ? 'scale-110 z-30' : `scale-${depthScale === 1.05 ? '105' : '100'} z-${career.depth * 10}`
+                      isHovered ? 'md:scale-110 scale-105 z-30' : `scale-${depthScale === 1.05 ? '105' : '100'} z-${career.depth * 10}`
                     }`}
                     style={{
                       transform: isHovered
-                        ? `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.1) translateZ(${career.depth * 20}px)`
+                        ? `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(${window.innerWidth >= 768 ? 1.1 : 1.05}) translateZ(${career.depth * 20}px)`
                         : `translateZ(${career.depth * 10}px) scale(${depthScale})`
                     }}
                   >
@@ -313,9 +313,9 @@ const HumanitiesCareerGallery = () => {
                     )}
 
                     {/* Ornate Frame */}
-                    <div className={`relative bg-gradient-to-br from-humanities-cream to-amber-50 rounded-2xl p-8 ${depthShadow} border-8 ${career.frameColor} ${
+                    <div className={`relative bg-gradient-to-br from-humanities-cream to-amber-50 rounded-2xl p-4 md:p-8 ${depthShadow} border-4 md:border-8 ${career.frameColor} ${
                       isHovered ? 'shadow-humanities-gold/70 border-humanities-gold' : ''
-                    } min-h-[500px] flex flex-col transition-all duration-500`}
+                    } min-h-[400px] md:min-h-[500px] flex flex-col transition-all duration-500`}
                       style={{
                         boxShadow: isHovered
                           ? `0 ${20 + career.depth * 10}px ${40 + career.depth * 10}px rgba(212, 175, 55, 0.4), 0 0 60px rgba(212, 175, 55, 0.3)`
@@ -336,21 +336,21 @@ const HumanitiesCareerGallery = () => {
                       )}
 
                       {/* Career Icon */}
-                      <div className="text-center mb-6">
-                        <div className={`inline-block text-8xl transition-transform duration-500 ${
-                          isHovered ? 'scale-125' : 'scale-100'
+                      <div className="text-center mb-4 md:mb-6">
+                        <div className={`inline-block text-6xl md:text-8xl transition-transform duration-500 ${
+                          isHovered ? 'md:scale-125 scale-110' : 'scale-100'
                         }`}>
                           {career.icon}
                         </div>
                       </div>
 
                       {/* Museum Label */}
-                      <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg border-2 border-humanities-gold/30 flex-grow flex flex-col justify-center">
-                        <h4 className="text-3xl font-bold text-humanities-burgundy mb-4 text-center font-playfair">
+                      <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 md:p-6 shadow-lg border-2 border-humanities-gold/30 flex-grow flex flex-col justify-center">
+                        <h4 className="text-2xl md:text-3xl font-bold text-humanities-burgundy mb-3 md:mb-4 text-center font-playfair">
                           {career.title}
                         </h4>
 
-                        <p className="text-gray-700 leading-relaxed font-crimson text-center">
+                        <p className="text-sm md:text-base text-gray-700 leading-relaxed font-crimson text-center">
                           {career.description}
                         </p>
                       </div>
