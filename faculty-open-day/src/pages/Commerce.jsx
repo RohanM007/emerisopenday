@@ -4,6 +4,7 @@ import { loadSlim } from "@tsparticles/slim";
 import ProgramSection from '../components/ProgramSection';
 import DownloadButton from '../components/DownloadButton';
 import ModuleDisplayCommerce from '../components/ModuleDisplayCommerce';
+import CareerQuiz from '../components/CareerQuiz';
 import CareerPathSelector from '../components/CareerPathSelector';
 import { getFacultyById } from '../data/facultyData';
 import { BookOpen, Award, DollarSign } from 'lucide-react';
@@ -12,6 +13,8 @@ import { commerceParticles } from '../config/particlesConfig';
 const Commerce = () => {
   const faculty = getFacultyById('commerce');
   const [init, setInit] = useState(false);
+  const [showQuiz, setShowQuiz] = useState(true);
+  const [selectedCareerPath, setSelectedCareerPath] = useState(null);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -62,8 +65,17 @@ const Commerce = () => {
         higherCertModules={faculty.higherCertificate.modules}
       />
 
-      {/* Career Path Selector - UNIQUE TO COMMERCE! */}
-      <CareerPathSelector />
+      {/* Career Matcher Quiz & Journey - UNIQUE TO COMMERCE! */}
+      {showQuiz ? (
+        <CareerQuiz
+          onComplete={(pathId) => {
+            setSelectedCareerPath(pathId);
+            setShowQuiz(false);
+          }}
+        />
+      ) : (
+        <CareerPathSelector preSelectedPath={selectedCareerPath} />
+      )}
 
       {/* Programs Section */}
       <div className="container mx-auto px-4 py-12 relative z-10">

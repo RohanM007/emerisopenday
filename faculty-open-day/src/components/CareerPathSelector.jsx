@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { TrendingUp, DollarSign, Target, BarChart3, Briefcase, GraduationCap, ArrowRight, CheckCircle2, Sparkles, BookOpen, RotateCw } from 'lucide-react';
 
-const CareerPathSelector = () => {
-  const [selectedPath, setSelectedPath] = useState(null);
+const CareerPathSelector = ({ preSelectedPath = null, showQuizPrompt = true }) => {
+  const [selectedPath, setSelectedPath] = useState(preSelectedPath);
   const [visibleSteps, setVisibleSteps] = useState(new Set());
 
   const step1Ref = useRef(null);
@@ -85,6 +85,19 @@ const CareerPathSelector = () => {
   ];
 
   const selectedPathData = careerPaths.find(p => p.id === selectedPath);
+
+  // Handle pre-selected path from quiz
+  useEffect(() => {
+    if (preSelectedPath && preSelectedPath !== selectedPath) {
+      setSelectedPath(preSelectedPath);
+      setVisibleSteps(new Set([1]));
+
+      // Scroll to timeline after a short delay
+      setTimeout(() => {
+        step1Ref.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 500);
+    }
+  }, [preSelectedPath]);
 
   // Scroll-based reveal effect
   useEffect(() => {
