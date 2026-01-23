@@ -380,12 +380,10 @@ const CareerPathSelector = ({ preSelectedPath = null, showQuizPrompt = true }) =
               <div
                 ref={step4Ref}
                 data-step="4"
-                className={`transition-all duration-700 ${visibleSteps.has(4) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                className={`transition-all duration-500 ${visibleSteps.has(4) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               >
                 <div className="flex flex-col md:flex-row items-center justify-center mb-10">
-                  <div className={`bg-gradient-to-br ${selectedPathData.color} text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-2xl shadow-2xl relative z-10 ${
-                    visibleSteps.has(4) ? 'animate-pulse' : ''
-                  }`}>
+                  <div className={`bg-gradient-to-br ${selectedPathData.color} text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-2xl shadow-2xl relative z-10`}>
                     4
                   </div>
                   <div className="ml-6 text-center md:text-left mt-4 md:mt-0">
@@ -394,12 +392,12 @@ const CareerPathSelector = ({ preSelectedPath = null, showQuizPrompt = true }) =
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl shadow-2xl p-10 md:p-12 border-2 border-gray-200 relative overflow-hidden">
+                <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl shadow-2xl p-6 md:p-12 border-2 border-gray-200 relative overflow-hidden">
                   {/* Decorative elements */}
                   <div className={`absolute top-0 right-0 w-40 h-40 bg-gradient-to-br ${selectedPathData.color} opacity-10 rounded-full blur-3xl`}></div>
 
                   <div className="relative z-10">
-                    <div className="flex items-center justify-center mb-10">
+                    <div className="flex items-center justify-center mb-8">
                       <div className={`bg-gradient-to-br ${selectedPathData.color} rounded-full p-4 shadow-xl`}>
                         <Briefcase className="text-white" size={40} />
                       </div>
@@ -408,14 +406,14 @@ const CareerPathSelector = ({ preSelectedPath = null, showQuizPrompt = true }) =
                       </h3>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                       {selectedPathData.jobs.map((job, index) => (
                         <div
                           key={index}
-                          className={`group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border-2 ${selectedPathData.borderColor} hover:border-4 relative overflow-hidden ${
-                            visibleSteps.has(4) ? 'animate-fadeIn' : ''
-                          }`}
-                          style={{ animationDelay: `${index * 100}ms` }}
+                          className={`group bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 ${selectedPathData.borderColor} hover:border-4 relative overflow-hidden`}
+                          style={{
+                            animation: visibleSteps.has(4) ? `fadeIn 0.5s ease-out ${index * 0.1}s both` : 'none'
+                          }}
                         >
                           {/* Hover gradient overlay */}
                           <div className={`absolute inset-0 bg-gradient-to-br ${selectedPathData.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
