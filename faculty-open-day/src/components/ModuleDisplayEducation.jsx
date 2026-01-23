@@ -52,7 +52,7 @@ const ModuleDisplayEducation = ({ higherCertModules, degreeModules }) => {
 
   return (
     <div className="py-16 relative z-10">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-2 sm:px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
           <div className="inline-block bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl px-8 py-6 border-2 border-purple-200 shadow-lg">
@@ -196,31 +196,29 @@ const ModuleDisplayEducation = ({ higherCertModules, degreeModules }) => {
                       <Calendar className="w-5 h-5 mr-2" />
                       Year Long
                     </h4>
-                    <div className="grid grid-cols-1 gap-3 overflow-x-auto">
+                    <div className="space-y-3">
                       {modules
                         .filter(m => m.semester === 0)
                         .map((module) => (
                           <div
                             key={module.code}
-                            className="bg-white rounded-lg p-4 shadow-sm border-2 border-purple-200 hover:shadow-md transition-shadow min-w-full"
+                            className="bg-white rounded-lg p-2 sm:p-3 md:p-4 shadow-sm border-2 border-purple-200 hover:shadow-md transition-shadow"
                           >
-                            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3">
-                              <div className="flex-1 min-w-0">
-                                <div className="flex flex-wrap items-center gap-3 mb-2">
-                                  <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-bold whitespace-nowrap">
-                                    {module.code}
+                            <div className="flex flex-col gap-2">
+                              <div className="flex flex-wrap items-center gap-2">
+                                <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-bold whitespace-nowrap">
+                                  {module.code}
+                                </span>
+                                {module.nqf && (
+                                  <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs font-semibold whitespace-nowrap">
+                                    NQF {module.nqf}
                                   </span>
-                                  {module.nqf && (
-                                    <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs font-semibold">
-                                      NQF {module.nqf}
-                                    </span>
-                                  )}
-                                </div>
-                                <h5 className="font-bold text-gray-900 break-words">{module.name}</h5>
+                                )}
                               </div>
-                              <div className="flex items-center sm:ml-4 flex-shrink-0">
+                              <h5 className="font-bold text-gray-900">{module.name}</h5>
+                              <div className="flex items-center">
                                 <Award className="w-5 h-5 mr-1 text-purple-500" />
-                                <span className="font-bold text-gray-900 whitespace-nowrap">{module.credits}</span>
+                                <span className="font-bold text-gray-900">{module.credits}</span>
                               </div>
                             </div>
                           </div>
@@ -259,7 +257,7 @@ const ModuleDisplayEducation = ({ higherCertModules, degreeModules }) => {
                   openCategories[category] ? 'max-h-[2000px]' : 'max-h-0'
                 }`}
               >
-                <div className={`p-6 ${categoryColors[category] || 'bg-gray-50'}`}>
+                <div className={`p-2 sm:p-4 md:p-6 ${categoryColors[category] || 'bg-gray-50'}`}>
                   {/* Year Long Modules */}
                   {semesters.yearLong.length > 0 && (
                     <div className="mb-6">
@@ -267,27 +265,25 @@ const ModuleDisplayEducation = ({ higherCertModules, degreeModules }) => {
                         <Calendar className="w-5 h-5 mr-2" />
                         Year Long
                       </h4>
-                      <div className="grid grid-cols-1 gap-3">
+                      <div className="space-y-3">
                         {semesters.yearLong.map((module) => (
                           <div
                             key={module.code}
-                            className="bg-white rounded-lg p-4 shadow-sm border-2 border-gray-200 hover:shadow-md transition-shadow"
+                            className="bg-white rounded-lg p-2 sm:p-3 md:p-4 shadow-sm border-2 border-gray-200 hover:shadow-md transition-shadow"
                           >
-                            <div className="flex justify-between items-start">
-                              <div className="flex-1">
-                                <div className="flex items-center gap-3 mb-2">
-                                  <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-bold">
-                                    {module.code}
+                            <div className="flex flex-col gap-2">
+                              <div className="flex flex-wrap items-center gap-2">
+                                <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-bold whitespace-nowrap">
+                                  {module.code}
+                                </span>
+                                {module.nqf && (
+                                  <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs font-semibold whitespace-nowrap">
+                                    NQF {module.nqf}
                                   </span>
-                                  {module.nqf && (
-                                    <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs font-semibold">
-                                      NQF {module.nqf}
-                                    </span>
-                                  )}
-                                </div>
-                                <h5 className="font-bold text-gray-900">{module.name}</h5>
+                                )}
                               </div>
-                              <div className="flex items-center ml-4">
+                              <h5 className="font-bold text-gray-900">{module.name}</h5>
+                              <div className="flex items-center">
                                 <Award className="w-5 h-5 mr-1 text-blue-500" />
                                 <span className="font-bold text-gray-900">{module.credits}</span>
                               </div>
