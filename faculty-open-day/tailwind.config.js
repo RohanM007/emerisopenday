@@ -26,13 +26,27 @@ module.exports = {
           light: '#FFF3E0',
           DEFAULT: '#FF9800',
           dark: '#F57C00',
+          burgundy: '#8B1538',
+          gold: '#D4AF37',
+          cream: '#F4F1DE',
+          forest: '#2D6A4F',
+          coral: '#E76F51',
+          purple: '#6B46C1',
         },
+      },
+      fontFamily: {
+        'playfair': ['"Playfair Display"', 'serif'],
+        'crimson': ['"Crimson Text"', 'serif'],
+        'quicksand': ['Quicksand', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.8s ease-in-out',
         'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
         'pulse': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'pattern-slide': 'patternSlide 20s linear infinite',
+        'typewriter': 'typewriter 2s steps(40) forwards',
+        'page-turn': 'pageTurn 0.8s ease-in-out forwards',
+        'ink-splatter': 'inkSplatter 0.6s ease-out forwards',
       },
       keyframes: {
         fadeIn: {
@@ -56,6 +70,20 @@ module.exports = {
         patternSlide: {
           '0%': { transform: 'translate(0, 0)' },
           '100%': { transform: 'translate(60px, 60px)' },
+        },
+        typewriter: {
+          '0%': { width: '0' },
+          '100%': { width: '100%' },
+        },
+        pageTurn: {
+          '0%': { transform: 'rotateY(0deg)', opacity: '1' },
+          '50%': { transform: 'rotateY(90deg)', opacity: '0.5' },
+          '100%': { transform: 'rotateY(0deg)', opacity: '1' },
+        },
+        inkSplatter: {
+          '0%': { transform: 'scale(0)', opacity: '0' },
+          '50%': { transform: 'scale(1.2)', opacity: '0.8' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
         },
       },
     },
