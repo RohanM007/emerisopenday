@@ -6,6 +6,7 @@ import DownloadButton from '../components/DownloadButton';
 import ModuleDisplayCommerce from '../components/ModuleDisplayCommerce';
 import CareerQuiz from '../components/CareerQuiz';
 import CareerPathSelector from '../components/CareerPathSelector';
+import Disclaimer from '../components/Disclaimer';
 import { getFacultyById } from '../data/facultyData';
 import { BookOpen, Award, DollarSign } from 'lucide-react';
 import { commerceParticles } from '../config/particlesConfig';
@@ -58,6 +59,9 @@ const Commerce = () => {
 
 
       </section>
+
+      {/* Disclaimer Section */}
+      <Disclaimer />
 
       {/* Module Display Section */}
       <ModuleDisplayCommerce

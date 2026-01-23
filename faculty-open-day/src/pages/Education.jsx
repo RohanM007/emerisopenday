@@ -4,6 +4,7 @@ import { loadSlim } from "@tsparticles/slim";
 import ProgramSection from '../components/ProgramSection';
 import DownloadButton from '../components/DownloadButton';
 import ModuleDisplayEducation from '../components/ModuleDisplayEducation';
+import Disclaimer from '../components/Disclaimer';
 import { getFacultyById } from '../data/facultyData';
 import { BookOpen, Award, DollarSign, MapPin, Users, Heart } from 'lucide-react';
 import { educationParticles } from '../config/particlesConfig';
@@ -54,6 +55,9 @@ const Education = () => {
 
 
       </section>
+
+      {/* Disclaimer Section */}
+      <Disclaimer />
 
       {/* Module Display Section */}
       <ModuleDisplayEducation

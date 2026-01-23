@@ -4,6 +4,7 @@ import { loadSlim } from "@tsparticles/slim";
 import ProgramSection from '../components/ProgramSection';
 import DownloadButton from '../components/DownloadButton';
 import ModuleDisplayLaw from '../components/ModuleDisplayLaw';
+import Disclaimer from '../components/Disclaimer';
 import { getFacultyById } from '../data/facultyData';
 import { BookOpen, Award, DollarSign } from 'lucide-react';
 import { lawParticles } from '../config/particlesConfig';
@@ -54,6 +55,9 @@ const Law = () => {
 
 
       </section>
+
+      {/* Disclaimer Section */}
+      <Disclaimer />
 
       {/* Module Display Section */}
       <ModuleDisplayLaw

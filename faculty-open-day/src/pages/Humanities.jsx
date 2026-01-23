@@ -5,6 +5,7 @@ import ProgramSection from '../components/ProgramSection';
 import DownloadButton from '../components/DownloadButton';
 import ModuleDisplayHumanities from '../components/ModuleDisplayHumanities';
 import HumanitiesCareerGallery from '../components/HumanitiesCareerGallery';
+import Disclaimer from '../components/Disclaimer';
 import { getFacultyById } from '../data/facultyData';
 import { BookOpen, Award, DollarSign } from 'lucide-react';
 import { humanitiesParticles } from '../config/particlesConfig';
@@ -59,6 +60,9 @@ const Humanities = () => {
 
 
       </section>
+
+      {/* Disclaimer Section */}
+      <Disclaimer />
 
       {/* Module Display Section */}
       <ModuleDisplayHumanities
