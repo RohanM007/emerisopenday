@@ -4,6 +4,7 @@ import { loadSlim } from "@tsparticles/slim";
 import ProgramSection from '../components/ProgramSection';
 import DownloadButton from '../components/DownloadButton';
 import ModuleDisplayCommerce from '../components/ModuleDisplayCommerce';
+import CareerPathSelector from '../components/CareerPathSelector';
 import { getFacultyById } from '../data/facultyData';
 import { BookOpen, Award, DollarSign } from 'lucide-react';
 import { commerceParticles } from '../config/particlesConfig';
@@ -60,6 +61,9 @@ const Commerce = () => {
         degreeModules={faculty.degree.modules}
         higherCertModules={faculty.higherCertificate.modules}
       />
+
+      {/* Career Path Selector - UNIQUE TO COMMERCE! */}
+      <CareerPathSelector />
 
       {/* Programs Section */}
       <div className="container mx-auto px-4 py-12 relative z-10">

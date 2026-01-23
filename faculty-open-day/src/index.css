@@ -75,3 +75,19 @@
 .h-72 {
   height: 18rem; /* 288px */
 }
+
+/* Fade in animation for career path details */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
