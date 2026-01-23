@@ -104,10 +104,12 @@ const CareerPathSelector = ({ preSelectedPath = null, showQuizPrompt = true }) =
   useEffect(() => {
     if (!selectedPath) return;
 
+    // More responsive settings for mobile
+    const isMobile = window.innerWidth < 768;
     const observerOptions = {
       root: null,
-      rootMargin: '-100px',
-      threshold: 0.3
+      rootMargin: isMobile ? '-50px' : '-100px', // Less strict margin on mobile
+      threshold: isMobile ? 0.1 : 0.3 // Lower threshold on mobile
     };
 
     const observerCallback = (entries) => {
