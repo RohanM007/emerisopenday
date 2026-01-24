@@ -1,15 +1,24 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Calendar, Award, RotateCw } from 'lucide-react';
 
 const ModuleDisplayCommerce = ({ higherCertModules, degreeModules }) => {
   const [activeTab, setActiveTab] = useState('degree');
   const [flippedCards, setFlippedCards] = useState({});
+  const moduleGridRef = useRef(null);
 
   const toggleFlip = (moduleCode) => {
     setFlippedCards(prev => ({
       ...prev,
       [moduleCode]: !prev[moduleCode]
     }));
+  };
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+    // Scroll to module grid after tab change
+    setTimeout(() => {
+      moduleGridRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
   };
 
   const modules = activeTab === 'degree' ? degreeModules : higherCertModules;
@@ -95,7 +104,7 @@ const ModuleDisplayCommerce = ({ higherCertModules, degreeModules }) => {
         <div className="flex justify-center mb-8">
           <div className="inline-flex bg-gray-100 rounded-lg p-1">
             <button
-              onClick={() => setActiveTab('degree')}
+              onClick={() => handleTabChange('degree')}
               className={`px-6 py-3 rounded-md font-semibold transition-all duration-300 ${
                 activeTab === 'degree'
                   ? 'bg-white border-green-500 text-green-600 shadow-md'
@@ -105,7 +114,7 @@ const ModuleDisplayCommerce = ({ higherCertModules, degreeModules }) => {
               Degree Year 1
             </button>
             <button
-              onClick={() => setActiveTab('certificate')}
+              onClick={() => handleTabChange('certificate')}
               className={`px-6 py-3 rounded-md font-semibold transition-all duration-300 ${
                 activeTab === 'certificate'
                   ? 'bg-white border-green-500 text-green-600 shadow-md'
@@ -118,7 +127,7 @@ const ModuleDisplayCommerce = ({ higherCertModules, degreeModules }) => {
         </div>
 
         {/* Module Grid - 3D Flip Cards with Enhanced Design */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div ref={moduleGridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {modules.map((module, index) => {
             // Calculate dynamic text size based on module name length
             const nameLength = module.name.length;
