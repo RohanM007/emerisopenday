@@ -4,7 +4,7 @@ import { Calendar, Award, RotateCw } from 'lucide-react';
 const ModuleDisplayCommerce = ({ higherCertModules, degreeModules }) => {
   const [activeTab, setActiveTab] = useState('degree');
   const [flippedCards, setFlippedCards] = useState({});
-  const moduleGridRef = useRef(null);
+  const sectionRef = useRef(null);
 
   const toggleFlip = (moduleCode) => {
     setFlippedCards(prev => ({
@@ -15,9 +15,10 @@ const ModuleDisplayCommerce = ({ higherCertModules, degreeModules }) => {
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
-    // Scroll to module grid after tab change
+    setFlippedCards({}); // Reset all flipped cards when switching tabs
+    // Scroll to the section header
     setTimeout(() => {
-      moduleGridRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      sectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 100);
   };
 
@@ -86,7 +87,7 @@ const ModuleDisplayCommerce = ({ higherCertModules, degreeModules }) => {
   };
 
   return (
-    <div className="py-16 bg-white">
+    <div ref={sectionRef} className="py-16 bg-white relative z-10">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -111,7 +112,7 @@ const ModuleDisplayCommerce = ({ higherCertModules, degreeModules }) => {
                   : 'text-gray-600 hover:border-green-300 hover:text-green-500'
               }`}
             >
-              Degree Year 1
+              Degree Year 1 ({degreeModules.length} modules)
             </button>
             <button
               onClick={() => handleTabChange('certificate')}
@@ -121,13 +122,20 @@ const ModuleDisplayCommerce = ({ higherCertModules, degreeModules }) => {
                   : 'text-gray-600 hover:border-green-300 hover:text-green-500'
               }`}
             >
-              Higher Certificate
+              Higher Certificate ({higherCertModules.length} modules)
             </button>
           </div>
         </div>
 
+        {/* Active Tab Indicator */}
+        <div className="text-center mb-6">
+          <p className="text-lg font-semibold text-gray-700">
+            Showing: <span className="text-green-600">{activeTab === 'degree' ? 'Bachelor of Commerce' : 'Higher Certificate in Business Principles and Practice'}</span>
+          </p>
+        </div>
+
         {/* Module Grid - 3D Flip Cards with Enhanced Design */}
-        <div ref={moduleGridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div key={activeTab} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {modules.map((module, index) => {
             // Calculate dynamic text size based on module name length
             const nameLength = module.name.length;
