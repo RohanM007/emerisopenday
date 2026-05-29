@@ -2,6 +2,8 @@
 
 An immersive, interactive web application designed for Emeris Open Day, showcasing multiple faculties with unique, creative experiences tailored to each discipline.
 
+🌐 **Live Site**: https://rohanm007.github.io/emerisopenday/
+
 ## 🌟 Project Overview
 
 This application provides prospective students with an engaging way to explore different faculties at Emeris, featuring:
